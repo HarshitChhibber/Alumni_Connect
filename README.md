@@ -14,7 +14,24 @@ Alumni Connect is a centralized platform that helps colleges manage alumni data 
 - Database: MongoDB
 
 ## Setup
-1. Clone repo
-2. Install dependencies
-3. Add .env file
-4. Run frontend & backend
+- Clone the repository  
+- Install dependencies:
+   cd backend && npm install  
+   cd frontend && npm install  
+- Create a `.env` file using `.env.example`  
+- Run backend and frontend:
+   npm run dev
+
+## 📸 Screenshots
+
+### Landing Page
+![Landing](./screenshots/landing.png)
+### Dashboard
+![Dashboard](./screenshots/dashboard.png)
+### Profile
+![Profile](./screenshots/profile.png)
+### Career Roadmap
+![Roadmap](./screenshots/roadmap.png)
+### Authentication & Verification
+![Auth](./screenshots/auth.png)
+![Login](./screenshots/login.png)
