@@ -4,7 +4,7 @@ Alumni Connect is a centralized platform that helps colleges manage alumni data 
 ## Problem Statement
 Lack of a centralized system for managing alumni data and engagement leads to poor communication and missed opportunities for mentorship and collaboration.
 
-## 🎯 Impact
+## Impact
 Improves alumni engagement, enables mentorship opportunities, and helps institutions maintain long-term relationships with graduates.
 
 ## Features
