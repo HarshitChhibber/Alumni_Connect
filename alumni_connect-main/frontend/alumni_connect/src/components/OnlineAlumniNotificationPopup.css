@@ -1,0 +1,477 @@
+/* Online Alumni Notification Popup Styles */
+
+.notification-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.notification-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.notification-badge {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: slideIn 0.3s ease-out;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.notification-badge:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.badge-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  transition: all 0.3s ease;
+}
+
+.badge-content:hover {
+  background: #f5f5f5;
+}
+
+.badge-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.badge-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.badge-info h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.badge-info p {
+  margin: 2px 0 0 0;
+  font-size: 12px;
+  color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-dismiss {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-dismiss:hover {
+  background: #e0e0e0;
+  color: #333;
+}
+
+/* ========== PROFILE CARD STYLES ========== */
+
+.profile-card-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease-out;
+  backdrop-filter: blur(4px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.profile-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 380px;
+  position: relative;
+  animation: cardSlideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  overflow: hidden;
+}
+
+@keyframes cardSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  color: #666;
+  z-index: 10;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-close-btn:hover {
+  background: white;
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.online-indicator {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 12px;
+  height: 12px;
+  background: #4CAF50;
+  border: 2px solid white;
+  border-radius: 50%;
+  z-index: 5;
+  box-shadow: 0 0 6px rgba(76, 175, 80, 0.5);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 6px rgba(76, 175, 80, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(76, 175, 80, 0.8);
+  }
+}
+
+/* Profile Picture Section */
+
+.card-avatar-section {
+  text-align: center;
+  padding: 24px 24px 16px 24px;
+}
+
+.card-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #f0f0f0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Info Section */
+
+.card-info {
+  padding: 0 24px 16px 24px;
+  text-align: center;
+}
+
+.alumni-name {
+  margin: 0 0 6px 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+}
+
+.alumni-role {
+  margin: 0 0 12px 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.badge-alumni {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #f0f4ff;
+  color: #5e6dff;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: #666;
+  font-size: 14px;
+}
+
+.info-icon {
+  font-size: 16px;
+}
+
+.info-text {
+  color: #666;
+  font-weight: 500;
+}
+
+/* Skills Section */
+
+.skills-section {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.skill-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #f5f5f5;
+  color: #333;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.skill-badge:hover {
+  background: #e8e8e8;
+  border-color: #999;
+}
+
+.skill-badge.more {
+  background: #f0f4ff;
+  color: #5e6dff;
+  border-color: #d0d8ff;
+}
+
+/* Action Buttons */
+
+.card-actions {
+  display: flex;
+  gap: 12px;
+  padding: 0 24px 20px 24px;
+}
+
+.btn-view-profile,
+.btn-connect-primary {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-view-profile {
+  background: #f5f5f5;
+  color: #333;
+  border: 1px solid #e0e0e0;
+}
+
+.btn-view-profile:hover:not(:disabled) {
+  background: #e8e8e8;
+  border-color: #999;
+}
+
+.btn-connect-primary {
+  background: #1a1a1a;
+  color: white;
+}
+
+.btn-connect-primary:hover:not(:disabled) {
+  background: #000;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.btn-connect-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Message Input Wrapper */
+
+.message-input-wrapper {
+  padding: 0 24px 24px 24px;
+  border-top: 1px solid #eee;
+}
+
+.card-message-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  resize: vertical;
+  min-height: 60px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  margin-bottom: 6px;
+}
+
+.card-message-input:focus {
+  outline: none;
+  border-color: #1a1a1a;
+  box-shadow: 0 0 0 3px rgba(26, 26, 26, 0.1);
+}
+
+.message-char-count {
+  text-align: right;
+  font-size: 12px;
+  color: #999;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .notification-container {
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+  }
+
+  .notification-badges {
+    max-width: 100%;
+  }
+
+  .profile-card {
+    width: 95%;
+    max-width: 100%;
+  }
+
+  .card-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .alumni-name {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .badge-content {
+    padding: 8px 12px;
+  }
+
+  .badge-avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .badge-info h4 {
+    font-size: 12px;
+  }
+
+  .badge-info p {
+    font-size: 11px;
+  }
+
+  .profile-card {
+    width: 98%;
+  }
+
+  .card-avatar-section {
+    padding: 20px 16px 12px 16px;
+  }
+
+  .card-info {
+    padding: 0 16px 12px 16px;
+  }
+
+  .alumni-name {
+    font-size: 18px;
+  }
+
+  .info-item {
+    font-size: 13px;
+  }
+
+  .card-actions {
+    padding: 0 16px 16px 16px;
+    gap: 10px;
+  }
+
+  .btn-view-profile,
+  .btn-connect-primary {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .message-input-wrapper {
+    padding: 0 16px 16px 16px;
+  }
+
+  .card-message-input {
+    font-size: 12px;
+    min-height: 50px;
+  }
+}
+
