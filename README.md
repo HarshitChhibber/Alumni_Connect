@@ -25,13 +25,13 @@ Alumni Connect is a centralized platform that helps colleges manage alumni data 
 ## 📸 Screenshots
 
 ### Landing Page
-![Landing](./screenshots/landing.png)
+<img src="./screenshots/landing.png" width="800"/>
 ### Dashboard
-![Dashboard](./screenshots/dashboard.png)
+<img src="./screenshots/dashboard.png" width="800"/>
 ### Profile
-![Profile](./screenshots/profile.png)
+<img src="./screenshots/profile.png" width="800"/>
 ### Career Roadmap
-![Roadmap](./screenshots/roadmap.png)
+<img src="./screenshots/roadmap.png" width="800"/>
 ### Authentication & Verification
-![Auth](./screenshots/auth.png)
-![Login](./screenshots/login.png)
+<img src="./screenshots/auth.png" width="800"/>
+<img src="./screenshots/login.png" width="800"/>
